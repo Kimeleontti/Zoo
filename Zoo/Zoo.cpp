@@ -6,7 +6,7 @@
 int main()
 {
     std::cout << "Moikka maailma\n";
-    std::cout << "Toimiiko\n";
+    std::cout << "Toimiikin\n";
     std::cout << "ju";
 }
 
