@@ -14,6 +14,10 @@ public:
 	Date();
 	Date(int y, int m, int d);
 	string ToString();
+	//bool setValues(int y, int m, int d) { Y = y, D = d, M = m; }
 	bool setValues(int y, int m, int d);
+	int getY();
+	int getM();
+	int getD();
 };
 

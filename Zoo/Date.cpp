@@ -1,17 +1,48 @@
 #include "Date.h"
-string Date::Date()
+#include <string>
+
+using namespace std;
+
+Date::Date(int y, int m, int d)
+	: D(d), M(m), Y(y)
 {
-	// now we formulate person contents using c-language functions
-	const size_t bufsize = 1024;
-	char buf[bufsize];
-	// 1) sprintf() is unsafe (buffer overflow!) --> project properties | c/c++ | general | sdl check off
-	//sprintf(buf,"%s %s %s", this->getFname().c_str(), this->getLname().c_str(),
-	//	this->isFemale() ? "female" : "miesoletettu");
-	// 2) sprintf_s() is recommended safe version (but with problem: not found in every libs)
-	//sprintf_s(buf, "%s %s %s", this->getFname().c_str(), this->getLname().c_str(),
-	//	this->isFemale() ? "female" : "miesoletettu");
-	// 3) snprintf() is safe and is found in every libs
-	snprintf(buf, bufsize, "%s %s %s", this->getFname().c_str(), this->getLname().c_str(),
-		this->isFemale() ? "female" : "male?");
-	return buf; // compiler: return string(buf);
+	
+}
+string Date::ToString()
+{
+	string text;
+	text.append(to_string(Y));
+	text.append(" ");
+	text.append(to_string(M));
+	text.append(" ");
+	text.append(to_string(D));
+	return text;
+}
+bool Date::setValues(int y, int m, int d)
+{
+	bool success;
+	
+	if (d>0 && d<32 && y>1000 && y<2022 && m>0 && m<13){
+		success = true;
+		Y = y, D = d, M = m;
+	}
+	else {
+		success = false;
+	}
+	return success;
+}
+int Date::getY()
+{
+
+	return Y;
+}
+int Date::getD()
+{
+
+	return D;
+}
+int Date::getM()
+{
+
+	return M;
 }
