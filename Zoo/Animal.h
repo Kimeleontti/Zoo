@@ -7,11 +7,12 @@ class Animal
 {
 private:
 // string is standard c++ string but it needs #include <string> and using namespace std;
+
+
+public:
 	string Name;
 	Date Birth;
 	double Weight;
-
-public:
 	Animal();
 	Animal(string name, Date birth, double weight);
 	string ToString();
