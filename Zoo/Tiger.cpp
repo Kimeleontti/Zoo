@@ -3,11 +3,10 @@
 
 using namespace std;
 
-Tiger::Tiger(string name, Date birth, double weight, string Species) 
+Tiger::Tiger(string name, Date birth, double weight, string species) 
+	:Animal(name,birth,weight), Species(species)
 {
-	Animal::setName(name);
-	Animal::setBirth(birth);
-	Animal::setWeight(weight);
+
 }
 string Tiger::ToString()
 {
@@ -16,14 +15,34 @@ string Tiger::ToString()
 	text.append(" ");
 	text.append(Birth.ToString());
 	text.append(" ");
-	text.append(to_string(Weight));
+	string rounded = to_string(Weight).substr(0, to_string(Weight).find(".") + 2);
+	//double rounded = round( Weight);
+	//float rounded = floor(Weight * 100.0) / 100.0;
+	text.append(rounded);
+	text.append(" ");
 	text.append(Species);
 	return text;
 }
 
+void Tiger::move()
+{
+	//Code
+}
 
-string Tiger::getName()
+void Tiger::utter()
+{
+	//code
+}
+
+
+string Tiger::getSpecies()  
 {
 
-	return Animal::getName();
+	return Species;
+}
+
+void Tiger::setSpecies( string species)
+{
+	Species = species;
+	return ; 
 }

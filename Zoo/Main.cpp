@@ -13,6 +13,11 @@ int main() {
 	cout << "x arvot ovat "<< (x.ToString()) << "\n";
 	cout << "x:n y arvo "<< (x.getY()) << "\n";
 	cout << "\n"<< "\n"<< "\n"<< "\n" << "\n";
-	Tiger tikru = Tiger("nakki", x, 59.5, "Tiikeri");
-	cout << tikru.getName();
+	cout.precision(2);
+	Tiger tikru = Tiger("nakki", Date(1,2,3), 59.5, "Tiikeri");
+	cout << tikru.ToString()<< "\n";
+	cout << tikru.getName()<< "\n";
+	cout << tikru.getSpecies()<< "\n";
+	tikru.setSpecies("Karvaolio");
+	cout << tikru.getSpecies()<< "\n";
 };

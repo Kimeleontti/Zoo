@@ -8,10 +8,10 @@ private:
 public:
     Tiger();
 	Tiger(string name, Date birth, double Weight, string species);
-    string species();
     string ToString();
-    void move() {};
-    void utter() {};
-    string getName();
+    void move() ;
+    void utter() ;
+    string getSpecies();
+    void setSpecies(string species);
 };
 

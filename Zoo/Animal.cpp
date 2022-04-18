@@ -15,7 +15,7 @@ string Animal::ToString()
 	text.append(" ");
 	text.append(Birth.ToString());
 	text.append(" ");
-	text.append(to_string(Weight));
+	text.append(to_string(Weight),2);
 	return text;
 }
 
