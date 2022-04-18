@@ -152,6 +152,7 @@
     <ClInclude Include="Date.h" />
     <ClInclude Include="Shark.h" />
     <ClInclude Include="Tiger.h" />
+    <ClInclude Include="Zoo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
