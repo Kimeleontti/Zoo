@@ -30,6 +30,9 @@
     <ClCompile Include="Tiger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Shark.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Date.h">
@@ -39,6 +42,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Tiger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shark.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
