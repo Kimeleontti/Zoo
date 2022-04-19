@@ -7,7 +7,8 @@ using namespace std;
 class Zoo
 {
 private:
-	map<string, Animal> animals;
+	map<string, Animal&> animals;
+	map<string, int> testi;
 	// typedef pair<const Key, T> value_type;
 
 public:

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Animal::Animal(string name, Date birth, double weight) 
+Animal::Animal(string name, Date birth, double weight)
 	: Name(name), Birth(birth), Weight(weight)
 {
 	

@@ -11,7 +11,6 @@ class Date
 		int D;
 
 public:
-	Date();
 	Date(int y, int m, int d);
 	string ToString();
 	//bool setValues(int y, int m, int d) { Y = y, D = d, M = m; }

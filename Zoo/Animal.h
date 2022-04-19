@@ -13,7 +13,6 @@ public:
 	string Name;
 	Date Birth;
 	double Weight;
-	Animal();
 	Animal(string name, Date birth, double weight);
 	string ToString();
 	virtual void move() = 0;

@@ -30,4 +30,5 @@ int main() {
 	cout << kala.getSpecies()<< "\n";
 	kala.setSpecies("valko");
 	cout << kala.getSpecies()<< "\n";
+
 };
