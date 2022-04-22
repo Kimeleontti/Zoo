@@ -11,7 +11,7 @@ Tiger::Tiger(string name, Date birth, double weight, string species)
 string Tiger::ToString()
 {
 	string text;
-	text.append(Name);
+	/*text.append(Name);
 	text.append(" ");
 	text.append(Birth.ToString());
 	text.append(" ");
@@ -20,6 +20,8 @@ string Tiger::ToString()
 	//float rounded = floor(Weight * 100.0) / 100.0;
 	text.append(rounded);
 	text.append(" ");
+	text.append(Species);*/
+	text.append(Animal::ToString());
 	text.append(Species);
 	return text;
 }

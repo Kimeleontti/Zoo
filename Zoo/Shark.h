@@ -7,7 +7,6 @@ class Shark :
 private:
     string Species;
 public:
-    Shark();
 	Shark(string name, Date birth, double Weight, string species);
     string ToString();
     void move() ;
