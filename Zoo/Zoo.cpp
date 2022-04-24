@@ -5,6 +5,7 @@
 #include "Shark.h"
 #include "Tiger.h"
 #include "Animal.h"
+#include "Date.h"
 
 using namespace std;
 
@@ -68,7 +69,29 @@ void Zoo::printSortedByName()
 
 void Zoo::printSortedByAge()
 {
-   // just values (animals) are printed, hint: you could retrieve the values as a List<Animal> and then find a sort() version
-   //who takes the the comparison lambda etc and implement the lambda so that it compares the birth dates
+    list<Animal*> lp;
+    for (auto it = animals.begin(); it != animals.end(); it++) {
+        lp.push_back(it->second);
+    }
+    auto bp = [](auto a, auto b) {
+        string s1 = a->ToString();
+        string s2 = b->ToString();
+
+
+        int pos = s1.find(" ");
+        string day = s1.substr(pos+1, 1); // pituudeksi 2 ja riisutaan " "
+        int pos2 = s1.find(" ",pos);
+        //cout << pos2 << "kk";
+
+        cout << part;
+        return s1 < s2;
+    };
+    lp.sort(bp);
+    printf("---------- animals by name ----------\n");
+    for (auto p : lp) {
+        printf("[%s,%s]\n", p->getName().c_str(), p->ToString().c_str());
+
+    }
+    printf("------ eof animals by name ----------\n");
 
 }
