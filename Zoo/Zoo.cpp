@@ -38,12 +38,12 @@ Animal* Zoo::remove(string name)
 }
 
 void Zoo::print()
-{
+{   //default print, [key , value] pairs are printed
     printf(" ---------- animals ----------\n");
     for (const auto& kv : animals) {
-        printf("key: %s value: %s\n", kv.first.c_str(), kv.second->ToString().c_str());
+        printf("[%s,%s]\n", kv.first.c_str(), kv.second->ToString().c_str());
     }
-    printf(" ------ eof animals ----------\n");
+    printf(" ------ eof animals ----------\n\n\n");
 }
 
 void Zoo::printSortedByName()
@@ -55,16 +55,20 @@ void Zoo::printSortedByName()
     auto bp = [](auto a, auto b) {
         string s1 = a->getName();
         string s2 = b->getName();
-        return s1 < s2;
+        return s1[0] < s2[0];
     };
     lp.sort(bp);
     printf("---------- animals by name ----------\n");
     for (auto p : lp) {
-        printf("%s\n", p->getName().c_str());
+        printf("[%s,%s]\n", p->getName().c_str(), p->ToString().c_str());
+
     }
     printf("------ eof animals by name ----------\n");
 }
 
 void Zoo::printSortedByAge()
 {
+   // just values (animals) are printed, hint: you could retrieve the values as a List<Animal> and then find a sort() version
+   //who takes the the comparison lambda etc and implement the lambda so that it compares the birth dates
+
 }
