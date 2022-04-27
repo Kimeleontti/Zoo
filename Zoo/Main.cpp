@@ -33,14 +33,14 @@ int main() {
 	
 	cout << "\n"<< "\n"<< "\n"<< "\n" << "\n";
 	cout << "tässä"<< "\n";
-	Shark fisu = Shark("XXXX", Date(8,2,2020), 100.5, "Shark");
-	Shark fisu2 = Shark("DDDD", Date(4,2,2020), 10.5, "Shark");
-	Shark fisu3 = Shark("CCC", Date(1,2,2020), 100.5, "Shark");
-	Shark fisu4 = Shark("RRR", Date(6,2,2020), 17.0, "Shark");
+	Shark fisu = Shark("XXXX", Date(8,2,1998), 100.5, "Shark");
+	Shark fisu2 = Shark("DDDD", Date(5,12,2020), 10.5, "Shark");
+	Shark fisu3 = Shark("CCC", Date(10,2,2000), 100.5, "Shark");
+	Shark fisu4 = Shark("RRR", Date(26,2,1248), 17.0, "Shark");
 	Shark fisu5 = Shark("BBBB", Date(4,2,2020), 78.5, "Shark");
-	Shark fisu6 = Shark("FFFF", Date(4,2,2020), 100.5, "Shark");
-	Shark fisu7 = Shark("OOOO", Date(9,2,2020), 100.5, "Shark");
-	Shark fisu8 = Shark("AAAA", Date(4,2,2020), 100.5, "Shark");
+	Shark fisu6 = Shark("FFFF", Date(1,2,2020), 100.5, "Shark");
+	Shark fisu7 = Shark("OOOO", Date(19,2,2020), 100.5, "Shark");
+	Shark fisu8 = Shark("AAAA", Date(4,2,2012), 100.5, "Shark");
 
 	Zoo korkeasaari = Zoo();
 	korkeasaari.add(&fisu);

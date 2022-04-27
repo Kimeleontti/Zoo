@@ -79,19 +79,38 @@ void Zoo::printSortedByAge()
 
 
         int pos = s1.find(" ");
-        string day = s1.substr(pos+1, 1); // pituudeksi 2 ja riisutaan " "
-        int pos2 = s1.find(" ",pos);
-        //cout << pos2 << "kk";
+        int pos2 = s1.find(" ",pos+1);
+        int day = stoi(s1.substr(pos+1, pos2-1-pos));
+        int pos3 = s1.find(" ",pos2+1);
+        int month = stoi(s1.substr(pos2+1, pos3-1-pos2)); 
+        int year = stoi(s1.substr(pos3+1, 4)); 
 
-        cout << part;
-        return s1 < s2;
+        int posb = s2.find(" ");
+        int pos2b = s2.find(" ",posb+1);
+        int dayb = stoi(s2.substr(posb+1, pos2b-1-posb));
+        int pos3b = s2.find(" ",pos2b+1);
+        int monthb = stoi(s2.substr(pos2b+1, pos3b-1-pos2b)); 
+        int yearb = stoi(s2.substr(pos3b+1, 4)); 
+        //cout << "day:" << dayb << "month:" << monthb << "year:" << yearb << endl;
+        
+        if (year != yearb){
+            return year < yearb;
+        }
+        else {
+            if (month != monthb){
+                return month < monthb;
+            }
+            else {
+                return day < dayb;
+            }
+        };
     };
     lp.sort(bp);
-    printf("---------- animals by name ----------\n");
+    printf("---------- animals by age ----------\n");
     for (auto p : lp) {
-        printf("[%s,%s]\n", p->getName().c_str(), p->ToString().c_str());
+        printf("[%s]\n", p->ToString().c_str());
 
     }
-    printf("------ eof animals by name ----------\n");
+    printf("------ eof animals by age ----------\n");
 
 }
