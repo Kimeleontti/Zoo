@@ -64,7 +64,7 @@ void Zoo::printSortedByName()
         printf("[%s,%s]\n", p->getName().c_str(), p->ToString().c_str());
 
     }
-    printf("------ eof animals by name ----------\n");
+    printf("------ eof animals by name ----------\n\n");
 }
 
 void Zoo::printSortedByAge()
@@ -106,12 +106,12 @@ void Zoo::printSortedByAge()
         };
     };
     lp.sort(bp);
-    printf("---------- animals by age ----------\n");
+    printf("\n---------- animals by age ----------\n");
     for (auto p : lp) {
         printf("[%s]\n", p->ToString().c_str());
 
     }
-    printf("------ eof animals by age ----------\n");
+    printf("------ eof animals by age ----------\n\n");
 
 }
 
