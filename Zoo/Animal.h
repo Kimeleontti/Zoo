@@ -23,5 +23,6 @@ public:
 	void setName( string name);
 	void setBirth(Date birth);
 	void setWeight(double weight);
+	virtual ~Animal();
 };
 

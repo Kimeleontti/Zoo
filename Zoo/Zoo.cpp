@@ -114,3 +114,11 @@ void Zoo::printSortedByAge()
     printf("------ eof animals by age ----------\n");
 
 }
+
+Zoo::~Zoo()
+{
+    for (auto it = animals.begin(); it != animals.end(); ) {
+        it = animals.erase(it);
+    }
+}
+

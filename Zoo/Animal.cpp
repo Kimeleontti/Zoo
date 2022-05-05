@@ -49,3 +49,10 @@ void Animal::setWeight(double weight)
 	Weight = weight;
 	return ;
 }
+
+Animal::~Animal()
+{
+	printf("Animal destructor: %s\n", this->ToString().c_str());
+}
+
+

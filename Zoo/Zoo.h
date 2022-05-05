@@ -17,4 +17,5 @@ public:
 	void print();
 	void printSortedByName();
 	void printSortedByAge();
+	~Zoo();
 };

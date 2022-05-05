@@ -13,4 +13,6 @@ public:
     void utter() ;
     string getSpecies();
     void setSpecies(string species);
+    virtual ~Shark();
+    
 };

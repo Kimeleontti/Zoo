@@ -48,3 +48,7 @@ void Tiger::setSpecies( string species)
 	Species = species;
 	return ; 
 }
+
+Tiger::~Tiger() {
+	printf("Tiger destructor: %s\n", this->ToString().c_str());
+}

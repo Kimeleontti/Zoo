@@ -48,3 +48,8 @@ void Shark::setSpecies( string species)
 	Species = species;
 	return ; 
 }
+
+
+Shark::~Shark() {
+	printf("Shark destructor: %s\n", this->ToString().c_str());
+}
